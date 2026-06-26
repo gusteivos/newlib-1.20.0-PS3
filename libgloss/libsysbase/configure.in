@@ -68,6 +68,9 @@ case "${target}" in
   powerpc-*-eabi)
    AC_DEFINE(REENTRANT_SYSCALLS_PROVIDED)
    ;;
+# powerpc*-ps3-elf* | powerpc*-ps3toolchain-elf*)
+#  AC_DEFINE(REENTRANT_SYSCALLS_PROVIDED)
+#  ;;
   powerpcle-*-pe)
 	;;
   sh*-*-*)
