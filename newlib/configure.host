@@ -437,7 +437,7 @@ case "${host}" in
 	##newlib_cflags="${newlib_cflags} -I`newlib-flags --kernel-dir`/include"
 	##newlib_cflags="${newlib_cflags} -idirafter ${gcc_dir}include"
 	;;
-  powerpc*-ps3-elf*|powerpc*-ps3toolchain-elf*)
+  powerpc*-ps3-elf*|powerpc*-ps3toolchain-elf*|powerpc*-celloslv2-elf*)
 	sys_dir=lv2
 	have_crt0="no"
 	;;
@@ -685,7 +685,7 @@ case "${host}" in
         syscall_dir=syscalls
 	default_newlib_io_long_long="yes"
         ;;
-  powerpc*-ps3-elf* | powerpc*-ps3toolchain-elf*)
+  powerpc*-ps3-elf* | powerpc*-ps3toolchain-elf* | powerpc*-celloslv2-elf*)
 	default_newlib_io_long_long="yes"
 	newlib_cflags="${newlib_cflags} -DREENTRANT_SYSCALLS_PROVIDED"
 	newlib_cflags="${newlib_cflags} -ffunction-sections -fdata-sections"
